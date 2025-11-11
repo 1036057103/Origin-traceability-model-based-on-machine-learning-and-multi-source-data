@@ -206,8 +206,9 @@ for model_name, model in models.items():
         print(f"Error generating visualization for {model_name}: {e}")
         continue
 
-print("\n=== 分析完成 ===")
-print("生成的文件:")
-print("- improved_results.xlsx: 详细的模型评估结果")
-print("- feature_selection_process.png: 特征选择过程图")
-print("- improved_confusion_matrix_*.png: 各模型的混淆矩阵")
+print("\n=== Analysis completed ===")
+print("Generated files:")
+print("- improved_results.xlsx: Detailed model evaluation results")
+print("- feature_selection_process.png: Feature selection process diagram")
+print("- improved_confusion_matrix_*.png: Confusion matrix for each model")
+
