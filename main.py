@@ -192,14 +192,14 @@ for model_name, model in models.items():
             print(f"  {label}: {acc:.4f}")
 
         # Plot confusion matrix
-        plt.figure(figsize=(12, 10))
+        plt.figure(figsize=(10, 8))
         disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=custom_labels)
-        disp.plot(cmap=plt.cm.Blues, values_format='d', ax=plt.gca())
-        plt.title(f"{model_name}", fontsize=16, pad=20)
-        plt.xticks(rotation=45, ha='right')
-        plt.yticks(rotation=45)
-        plt.tight_layout()
-        plt.savefig(f"improved_confusion_matrix_{model_name.replace(' ', '_')}.png", dpi=300, bbox_inches='tight')
+        disp.plot(cmap=plt.cm.Blues, values_format='d')
+        plt.title(f"Confusion Matrix for {model_name}")
+        plt.xticks(rotation=45)  
+        plt.yticks(rotation=45)  
+        plt.tight_layout()  
+        plt.savefig(f"confusion_matrix_{model_name}.png") 
         plt.show()
 
     except Exception as e:
@@ -211,4 +211,5 @@ print("Generated files:")
 print("- improved_results.xlsx: Detailed model evaluation results")
 print("- feature_selection_process.png: Feature selection process diagram")
 print("- improved_confusion_matrix_*.png: Confusion matrix for each model")
+
 
